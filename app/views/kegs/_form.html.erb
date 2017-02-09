@@ -1,0 +1,36 @@
+
+<%= form_for @keg do |f| %>
+ 
+  <% if @keg.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@keg.errors.count, "error") %> prohibited
+        this keg from being saved:
+      </h2>
+      <ul>
+        <% @keg.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %> 
+  </p>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount%>
+  </p>
+  <p>
+    <%= f.submit%>
+  </p>
+ 
+<% end %>

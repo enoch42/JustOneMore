@@ -1,0 +1,9 @@
+    <p>
+      Amount:
+      <%= pull.amount %>
+    </p>
+    <p>
+      <%= link_to 'destroy pull', [pull.keg, pull],
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'} %>
+    </p>
